@@ -18,8 +18,13 @@ class jenis_surat extends Model
     public function relasiJenis_surat()
     {
         return $this->belongsTo('App\surat_keluar');
+    }
 
+        @return
+
+    
+    public function relasiJenis_surat2()
+    {
         return $this->belongsTo('App\surat_masuk');
-
     }
 }
