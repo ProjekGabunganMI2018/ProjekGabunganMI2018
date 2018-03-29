@@ -16,7 +16,7 @@ class jenis_surat extends Model
 
     public function relasiJenis_surat()
     {
-        return $this->belongsTo('App\surat_keluar');
+        return $this->hasMany('App\surat_keluar');
     }
 
         @return
