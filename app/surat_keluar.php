@@ -18,7 +18,7 @@ class surat_keluar extends Model
 
     public function relasiSurat_keluar()
     {
-        return $this->hasMany('App\jenis_surat');
+        return $this->belongsTo('App\jenis_surat');
     }
 
 
