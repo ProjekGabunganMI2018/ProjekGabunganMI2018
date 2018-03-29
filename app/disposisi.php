@@ -2,19 +2,27 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Eloquent as Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
 
 class disposisi extends Model
 {
+    use SoftDeletes;
+
     protected $table = 'disposisi';
 
+    const CREATED_AT = 'created_at';
+    
+    const UPDATE_AT = 'update_at';
+    
     protected $fillable = [
 
     	'keterangan'
 
     ];
 
-    protected $primaryKey = '';
+    protected $primaryKey = 'id';
 
     public function relasiDisposisi()
     {
