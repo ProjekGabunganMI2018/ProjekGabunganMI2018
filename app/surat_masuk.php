@@ -8,7 +8,6 @@ class surat_masuk extends Model
 {
     protected $table = 'surat_masuk';
 
-    public $incrementing = false;
 
     protected $fillable = [
 
@@ -22,12 +21,33 @@ class surat_masuk extends Model
     public function relasiSurat_masuk()
     {
         return $this->hasMany('App\surat_keluar', 'no_surat');
+    }
 
-        return $this->hasMany('App\asal_surat');
+    @return
 
-        return $this->hasMany('App\jenis_surat');
+    public function relasiSurat_masuk2()
+    {
+        return $this->belongsTo('App\asal_surat');
+    }
 
+    @return
+
+    public function relasiSurat_masuk3()
+    {
+        return $this->belongsTo('App\jenis_surat');
+    }
+
+    @return
+
+    public function relasiSurat_masuk4()
+    {
         return $this->belongsTo('App\user');
+    }
 
+    @return
+
+    public function relasiSurat_masuk5()
+    {
+        return $this->hasMany('App\disposisi');
     }
 }

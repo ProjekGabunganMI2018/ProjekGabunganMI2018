@@ -27,4 +27,5 @@ class User extends Authenticatable
         
         return $this->hasMany(App\surat_keluar);
     }
+    
 }

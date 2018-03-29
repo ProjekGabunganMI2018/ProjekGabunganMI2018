@@ -6,14 +6,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class surat_keluar extends Model
 {
-    protected $table = 'branch';
-    public $incrementing = false;
+    protected $table = 'surat_keluar';
     protected $fillable = [
 
     	'nomor_surat','perihal','isi'
 
     ];
-    
+
     protected $primaryKey = 'nomor_surat';
 
 
@@ -27,7 +26,7 @@ class surat_keluar extends Model
 
     public function relasiSurat_keluar2()
     {
-    	return $this->hasMany('App\user');
+    	return $this->belongsTo('App\user');
 
     }
 
@@ -36,7 +35,7 @@ class surat_keluar extends Model
 
     public function relasiSurat_keluar3()
     {
-    	return $this->hasMany('App/surat_masuk');
+    	return $this->belongsTo('App/surat_masuk');
 
     }
 

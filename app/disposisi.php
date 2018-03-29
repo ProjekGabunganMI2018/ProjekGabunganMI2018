@@ -14,17 +14,34 @@ class disposisi extends Model
 
     ];
 
-    protected $primaryKey = 'kodeBranch';
+    protected $primaryKey = '';
 
     public function relasiDisposisi()
     {
-    	return $this->hasMany('App\user');
+    	return $this->belongsTo('App\user');
 
-    	return $this->hasMany('App\surat_masuk');
+    }
 
+    @return
+
+    public function relasiDisposisi2()
+    {
+        return $this->belongsTo('App\surat_masuk');
+    }
+
+
+    @return
+
+    public function relasiDisposisi3()
+    {
         return $this->hasMany('App\disposisi');
+    }
 
+
+    @return
+
+    public function relasiDisposisi4()
+    {
         return $this->belongsTo('App\disposisi');
-
     }
 }
