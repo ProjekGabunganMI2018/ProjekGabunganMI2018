@@ -2,12 +2,19 @@
 
 namespace App;
 
-use Illuminate\Database\Eloquent\Model;
+use Eloquent as Model;
+
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class surat_masuk extends Model
 {
+    use SoftDeletes;
+
     protected $table = 'surat_masuk';
 
+    const CREATED_AT = 'created_at';
+
+    const UPDATED_AT = 'updated_at';
 
     protected $fillable = [
 
