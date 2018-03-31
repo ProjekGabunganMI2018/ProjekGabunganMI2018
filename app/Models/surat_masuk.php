@@ -27,34 +27,34 @@ class surat_masuk extends Model
 
     public function relasiSurat_masuk()
     {
-        return $this->hasMany('App\surat_keluar', 'no_surat');
+        return $this->hasMany('App\Models\surat_keluar', 'no_surat');
     }
 
     @return
 
     public function relasiSurat_masuk2()
     {
-        return $this->belongsTo('App\asal_surat');
+        return $this->belongsTo('App\Models\asal_surat');
     }
 
     @return
 
     public function relasiSurat_masuk3()
     {
-        return $this->belongsTo('App\jenis_surat');
+        return $this->belongsTo('App\Models\jenis_surat');
     }
 
     @return
 
     public function relasiSurat_masuk4()
     {
-        return $this->belongsTo('App\user');
+        return $this->belongsTo('App\Models\user');
     }
 
     @return
 
     public function relasiSurat_masuk5()
     {
-        return $this->hasMany('App\disposisi');
+        return $this->hasMany('App\Models\disposisi');
     }
 }

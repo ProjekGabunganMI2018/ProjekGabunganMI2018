@@ -25,7 +25,7 @@ class User extends Authenticatable
     ];
     public function queryUser(){
         
-        return $this->hasMany(App\surat_keluar);
+        return $this->hasMany(App\Models\surat_keluar);
     }
     
 }

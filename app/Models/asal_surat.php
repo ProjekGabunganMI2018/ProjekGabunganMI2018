@@ -24,7 +24,7 @@ class asal_surat extends Model
 
     public function relasiAsal_surat()
     {
-        return $this->hasMany('App\jenis_surat');
+        return $this->hasMany('App\Models\jenis_surat');
 
     }
 }

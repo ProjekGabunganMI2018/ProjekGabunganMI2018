@@ -25,7 +25,7 @@ class jenis_surat extends Model
 
     public function relasiJenis_surat()
     {
-        return $this->hasMany('App\surat_keluar');
+        return $this->hasMany('App\Models\surat_keluar');
     }
 
         @return
@@ -33,6 +33,6 @@ class jenis_surat extends Model
     
     public function relasiJenis_surat2()
     {
-        return $this->hasMany('App\surat_masuk');
+        return $this->hasMany('App\Models\surat_masuk');
     }
 }

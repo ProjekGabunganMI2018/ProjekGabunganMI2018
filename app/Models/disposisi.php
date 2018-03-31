@@ -26,7 +26,7 @@ class disposisi extends Model
 
     public function relasiDisposisi()
     {
-    	return $this->belongsTo('App\user');
+    	return $this->belongsTo('App\Models\user');
 
     }
 
@@ -34,7 +34,7 @@ class disposisi extends Model
 
     public function relasiDisposisi2()
     {
-        return $this->belongsTo('App\surat_masuk');
+        return $this->belongsTo('App\Models\surat_masuk');
     }
 
 
@@ -42,7 +42,7 @@ class disposisi extends Model
 
     public function relasiDisposisi3()
     {
-        return $this->hasMany('App\disposisi');
+        return $this->hasMany('App\Models\disposisi');
     }
 
 
@@ -50,6 +50,6 @@ class disposisi extends Model
 
     public function relasiDisposisi4()
     {
-        return $this->belongsTo('App\disposisi');
+        return $this->belongsTo('App\Models\disposisi');
     }
 }

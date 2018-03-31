@@ -27,7 +27,7 @@ class surat_keluar extends Model
 
     public function relasiSurat_keluar()
     {
-        return $this->belongsTo('App\jenis_surat');
+        return $this->belongsTo('App\Models\jenis_surat');
     }
 
 
@@ -35,7 +35,7 @@ class surat_keluar extends Model
 
     public function relasiSurat_keluar2()
     {
-    	return $this->belongsTo('App\user');
+    	return $this->belongsTo('App\Models\user');
 
     }
 
@@ -44,7 +44,7 @@ class surat_keluar extends Model
 
     public function relasiSurat_keluar3()
     {
-    	return $this->belongsTo('App/surat_masuk');
+    	return $this->belongsTo('App\Models\surat_masuk');
 
     }
 
