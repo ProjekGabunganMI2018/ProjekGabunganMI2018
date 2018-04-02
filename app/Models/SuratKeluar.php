@@ -12,7 +12,7 @@ class SuratKeluar extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $table = 'surat_keluar';
+    protected $table = 'SuratKeluar';
 
     const CREATED_AT = 'created_at';
 
@@ -29,24 +29,22 @@ class SuratKeluar extends Model
 
     public function RelasiSuratKeluar()
     {
-        return $this->belongsTo('App\Models\jenis_surat');
+        return $this->belongsTo('App\Models\JenisSurat');
     }
 
 
-@return
 
     public function RelasiSuratKeluar2()
     {
-        return $this->belongsTo('App\Models\user');
+        return $this->belongsTo('App\Models\User');
 
     }
 
 
-@return
 
     public function RelasiSuratKeluar3()
     {
-        return $this->belongsTo('App\Models\surat_masuk');
+        return $this->belongsTo('App\Models\SuratMasuk');
 
     }
 

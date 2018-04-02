@@ -9,9 +9,12 @@ class User extends Authenticatable
 {
     use Notifiable;
 
-     * @var array
+     /* @var array
      */
-    protected $fillable = ['name', 'email','kontak','alamat','foto'];
+    protected $fillable = [
+
+        'name', 'email','kontak','alamat','foto'
+    ];
 
     protected $hidden = [
 

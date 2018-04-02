@@ -12,7 +12,7 @@ class AsalSurat extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $table = 'asal_surat';
+    protected $table = 'AsalSurat';
 
     const CREATED_AT = 'created_at';
 
@@ -26,7 +26,7 @@ class AsalSurat extends Model
 
     public function RelasiAsalSurat()
     {
-        return $this->hasMany('App\Models\jenis_surat');
+        return $this->hasMany('App\Models\JenisSurat');
 
     }
 }

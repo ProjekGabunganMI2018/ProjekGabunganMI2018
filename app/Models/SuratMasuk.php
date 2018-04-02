@@ -12,7 +12,7 @@ class SuratMasuk extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $table = 'surat_masuk';
+    protected $table = 'SuratMasuk';
 
     const CREATED_AT = 'created_at';
 
@@ -29,33 +29,29 @@ class SuratMasuk extends Model
 
     public function RelasiSuratMasuk()
     {
-        return $this->hasMany('App\Models\surat_keluar', 'no_surat');
+        return $this->hasMany('App\Models\SuratKeluar', 'no_surat');
     }
-@return
 
     public function RelasiSuratMasuk2()
     {
-        return $this->belongsTo('App\Models\asal_surat');
+        return $this->belongsTo('App\Models\AsalSurat');
     }
 
-@return
 
     public function RelasiSuratMasuk3()
     {
-        return $this->belongsTo('App\Models\jenis_surat');
+        return $this->belongsTo('App\Models\JenisSurat');
     }
 
-@return
 
     public function RelasiSuratMasuk4()
     {
-        return $this->belongsTo('App\Models\user');
+        return $this->belongsTo('App\Models\User');
     }
 
-@return
 
     public function RelasiSuratMasuk5()
     {
-        return $this->hasMany('App\Models\disposisi');
+        return $this->hasMany('App\Models\Disposisi');
     }
 }

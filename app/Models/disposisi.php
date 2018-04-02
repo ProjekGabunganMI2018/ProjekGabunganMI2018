@@ -12,7 +12,7 @@ class Disposisi extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $table = 'disposisi';
+    protected $table = 'Disposisi';
 
     const CREATED_AT = 'created_at';
 
@@ -20,7 +20,8 @@ class Disposisi extends Model
 
     protected $fillable = [
 
-        'keterangan'
+        'surat_masuk_id','pembuat_disposisi_id','penerima_disposisi_id',
+        'asal_disposisi','keterangan'
 
     ];
 
@@ -28,30 +29,25 @@ class Disposisi extends Model
 
     public function RelasiDisposisi()
     {
-        return $this->belongsTo('App\Models\user');
+        return $this->belongsTo('App\Models\User');
 
     }
-
-@return
 
     public function RelasiDisposisi2()
     {
-        return $this->belongsTo('App\Models\surat_masuk');
+        return $this->belongsTo('App\Models\SuratMasuk');
     }
 
-
-@return
 
     public function RelasiDisposisi3()
     {
-        return $this->hasMany('App\Models\disposisi');
+        return $this->hasMany('App\Models\Disposisi');
     }
 
 
-@return
 
     public function RelasiDisposisi4()
     {
-        return $this->belongsTo('App\Models\disposisi');
+        return $this->belongsTo('App\Models\Disposisi');
     }
 }

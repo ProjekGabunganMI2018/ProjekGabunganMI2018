@@ -12,7 +12,7 @@ class JenisSurat extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $table = 'jenis_surat';
+    protected $table = 'JenisSurat';
 
     const CREATED_AT = 'created_at';
 
@@ -27,14 +27,11 @@ class JenisSurat extends Model
 
     public function RelasiJenisSurat()
     {
-        return $this->hasMany('App\Models\surat_keluar');
+        return $this->hasMany('App\Models\SuratKeluar');
     }
-
-@return
-
 
     public function RelasiJenisSurat2()
     {
-        return $this->hasMany('App\Models\surat_masuk');
+        return $this->hasMany('App\Models\SuratMasuk');
     }
 }
