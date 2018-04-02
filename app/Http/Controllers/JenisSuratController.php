@@ -32,6 +32,7 @@ class Helloworld extends CI_Controller
         echo "Function fungsi dari Controller Helloworld";
     }
     public function parameters($nama){
-        echo "Selamat datang ".$nama;
+        echo "SuratMasuk";
+        echo "SuratKeluar";
     }
 }
