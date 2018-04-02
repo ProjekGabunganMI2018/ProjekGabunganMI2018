@@ -1,10 +1,10 @@
 <html>
 <body>
 
-<h2>Form Disposisi</h2>
-		<form action="/disposisi/{{$data_->id}}" method="POST">
+<h2>Form surat keluar</h2>
+		<form action="/surat keluar/{{$suratkeluar->id}}" method="POST">
 			<input type="hidden" name="_method" value="PATCH"/>
-			@include('disposisi')
+			@include('suratkeluar')
 		</form>
 
 </body>
