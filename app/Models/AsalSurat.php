@@ -6,9 +6,11 @@ use Eloquent as Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
-class asal_surat extends Model
+class AsalSurat extends Model
 {
-	use SoftDeletes;
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
 
     protected $table = 'asal_surat';
 
@@ -18,7 +20,7 @@ class asal_surat extends Model
 
     protected $fillable = [
 
-    	'nama','instansi','kontak','alamat','keterangan'
+        'nama','instansi','kontak','alamat','keterangan'
     ];
 
 

@@ -6,9 +6,11 @@ use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class surat_masuk extends Model
+class SuratMasuk extends Model
 {
     use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
 
     protected $table = 'surat_masuk';
 
@@ -18,42 +20,41 @@ class surat_masuk extends Model
 
     protected $fillable = [
 
-    'no_surat','tanggal','perihal','isi','keterangan','file'
+        'no_surat','tanggal','perihal','isi','keterangan','file'
 
     ];
 
 
     protected $primaryKey = 'no_surat';
 
-    public function relasiSurat_masuk()
+    public function RelasiSuratMasuk()
     {
         return $this->hasMany('App\Models\surat_keluar', 'no_surat');
     }
+@return
 
-    @return
-
-    public function relasiSurat_masuk2()
+    public function RelasiSuratMasuk2()
     {
         return $this->belongsTo('App\Models\asal_surat');
     }
 
-    @return
+@return
 
-    public function relasiSurat_masuk3()
+    public function RelasiSuratMasuk3()
     {
         return $this->belongsTo('App\Models\jenis_surat');
     }
 
-    @return
+@return
 
-    public function relasiSurat_masuk4()
+    public function RelasiSuratMasuk4()
     {
         return $this->belongsTo('App\Models\user');
     }
 
-    @return
+@return
 
-    public function relasiSurat_masuk5()
+    public function RelasiSuratMasuk5()
     {
         return $this->hasMany('App\Models\disposisi');
     }

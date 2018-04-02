@@ -6,45 +6,47 @@ use Eloquent as Model;
 
 use Illuminate\Database\Eloquent\SoftDeteles;
 
-class surat_keluar extends Model
+class SuratKeluar extends Model
 {
-	use SoftDeletes;
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
 
     protected $table = 'surat_keluar';
-    
+
     const CREATED_AT = 'created_at';
 
     const UPDATED_AT = 'updated_at';
 
     protected $fillable = [
 
-    	'nomor_surat','perihal','isi'
+        'nomor_surat','perihal','isi'
 
     ];
 
     protected $primaryKey = 'nomor_surat';
 
 
-    public function relasiSurat_keluar()
+    public function RelasiSuratKeluar()
     {
         return $this->belongsTo('App\Models\jenis_surat');
     }
 
 
-    @return
+@return
 
-    public function relasiSurat_keluar2()
+    public function RelasiSuratKeluar2()
     {
-    	return $this->belongsTo('App\Models\user');
+        return $this->belongsTo('App\Models\user');
 
     }
 
 
-    @return
+@return
 
-    public function relasiSurat_keluar3()
+    public function RelasiSuratKeluar3()
     {
-    	return $this->belongsTo('App\Models\surat_masuk');
+        return $this->belongsTo('App\Models\surat_masuk');
 
     }
 

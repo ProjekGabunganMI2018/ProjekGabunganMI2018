@@ -6,32 +6,34 @@ use Eloquent as model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
 
-class jenis_surat extends Model
+class JenisSurat extends Model
 {
     use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
 
     protected $table = 'jenis_surat';
 
     const CREATED_AT = 'created_at';
-    
+
     const UPDATED_AT = 'updated_at';
-    
+
     protected $fillable = [
 
-    	'nama','format_surat','keterangan'
+        'nama','format_surat','keterangan'
 
     ];
-   
 
-    public function relasiJenis_surat()
+
+    public function RelasiJenisSurat()
     {
         return $this->hasMany('App\Models\surat_keluar');
     }
 
-        @return
+@return
 
-    
-    public function relasiJenis_surat2()
+
+    public function RelasiJenisSurat2()
     {
         return $this->hasMany('App\Models\surat_masuk');
     }
