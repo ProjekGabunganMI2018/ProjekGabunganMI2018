@@ -1,38 +1,37 @@
 <?php
-defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+namespace App\Models;
 
-    /**
-     * Index Page for this controller.
-     *
-     * Maps to the following URL
-     * 		http://example.com/index.php/welcome
-     *	- or -
-     * 		http://example.com/index.php/welcome/index
-     *	- or -
-     * Since this controller is set as the default controller in
-     * config/routes.php, it's displayed at http://example.com/
-     *
-     * So any other public methods not prefixed with an underscore will
-     * map to /index.php/welcome/
-     * @see https://codeigniter.com/user_guide/general/urls.html
-     */
-    public function index()
-    {
-        $this->load->view('welcome_message');
-    }
-}
-class Helloworld extends CI_Controller
+use Eloquent as model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+
+
+class JenisSurat extends Model
 {
-    public function index(){
-        echo "Index dari Controller Helloworld";
+    use SoftDeletes;
+
+    protected $dates = ['deleted_at'];
+
+    protected $table = 'JenisSurat';
+
+    const CREATED_AT = 'created_at';
+
+    const UPDATED_AT = 'updated_at';
+
+    protected $fillable = [
+
+        'nama','format_surat','keterangan'
+
+    ];
+
+
+    public function RelasiJenisSurat()
+    {
+        return $this->hasMany('App\Models\SuratKeluar');
     }
-    public function fungsi(){
-        echo "Function fungsi dari Controller Helloworld";
-    }
-    public function parameters($nama){
-        echo "SuratMasuk";
-        echo "SuratKeluar";
+
+    public function RelasiJenisSurat2()
+    {
+        return $this->hasMany('App\Models\SuratMasuk');
     }
 }
