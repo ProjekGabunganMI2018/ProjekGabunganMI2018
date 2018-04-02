@@ -12,7 +12,7 @@ class Disposisi extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $table = 'Disposisi';
+    protected $table = 'disposisi';
 
     const CREATED_AT = 'created_at';
 

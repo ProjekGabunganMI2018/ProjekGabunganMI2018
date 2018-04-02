@@ -12,7 +12,7 @@ class SuratKeluar extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $table = 'SuratKeluar';
+    protected $table = 'surat_keluar';
 
     const CREATED_AT = 'created_at';
 

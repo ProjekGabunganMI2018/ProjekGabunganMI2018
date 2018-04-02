@@ -12,7 +12,7 @@ class SuratMasuk extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $table = 'SuratMasuk';
+    protected $table = 'surat_masuk';
 
     const CREATED_AT = 'created_at';
 
