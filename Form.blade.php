@@ -1,11 +1,16 @@
+		{{csrf_fied()}}
 
-		{{csrf_field()}}
+		nomor_surat:<input type = "text" name = "nomor_surat" value="{{$surat_keluar->nomor_surat}}"><br>
+		perihal:<input type = "text" name = "perihal" value="{{surat_keluar->perihal"}}><br>
+		isi:<input type = "text" name = "isi" value= "{{surat_keluar->isi"}}><br>
+		jenis_surat_id:<input type = "text" name = "{{surat_keluar->jenis_surat_id"}}><br>
+		peminta_surat_id:<input type = "text" name = "{{surat_keluar->peminta_surat_id"}}><br>
+		surat_masuk_id:<input type = "text" name = "{{surat_keluar->pembuat_surat_id"}}><br>
+		surat_masuk_id:<input type = "text" name = "{surat_keluar->surat_masuk_id"}}><br>
+		file:<input type = "text" name = "{{surat_keluar->file"}}><br>
+		keterangan:<input type = "text" name = "{{surat_keluar->keterangan"}}><br>
+		create_at:<input type = "text" name = "{{surat_keluar->create_at"}}><br>
+		update_at:<input type = "text" name ="{{surat_keluar->update_at"}}><br>
+		delete_at:<input type = "text" name ="{{surat_keluar->delete_at"}}><br>
 
-		SURAT MASUK:<input type = "text" name = "SURAT MASUK" value="{{$disposisi->surat_masuk}}"><br>
-		PEMBUAT SURAT:<input type = "text" name = "PEMBUAT SURAT"  value="{{$disposisi->pembuat_disposisi}}"><br>
-		PENERIMA SURAT:<input type = "text" name = "PENERIMA SURAT"  value="{{$disposisi->penerima_disposisi}}"><br>
-		ASAL DISPOSISI:<input type = "text" name = "ASAL DISPOSISI"  value="{{$disposisi->asal_disposisi}}"><br>
-		KETERANGAN:<input type = "text" name = "KETERANGAN"  value="{{$disposisi->keterangan}}"><br>
-
-		<input type="submit" value="submit">
-	
+		<input type+"submit" value="submit"
