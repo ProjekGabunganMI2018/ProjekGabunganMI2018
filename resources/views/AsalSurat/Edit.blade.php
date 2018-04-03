@@ -1,7 +1,11 @@
-<?php
-/**
- * Created by PhpStorm.
- * User: Rizky Abdika
- * Date: 02/04/2018
- * Time: 14:55
- */
+<html>
+<body>
+
+<h2>Form Asal Surat</h2>
+<form action="/AsalSurat/{{$list_asalsurat->id}}" method="post" >
+    <input type="hidden" name="_method" value="PATCH"/>
+    @include('AsalSurat.form')
+</form>
+
+</body>
+</html>

@@ -3,7 +3,7 @@
 </head>
 <body>
 
-<h1 align="center"> TABEL KONSUMEN </h1>
+<h1 align="center"> TABEL JENIS SURAT </h1>
 <a style="text-align:center" href='/JenisSurat/create'><button>Tambah Data</button></a>
 
 <table align="center" border="1" width="60%">
