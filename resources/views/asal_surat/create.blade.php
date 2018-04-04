@@ -11,7 +11,7 @@
 
             <div class="box-body">
                 <div class="row">
-                    {!! Form::open(['route' => 'asalSurat.store']) !!}
+                    {!! Form::open(['route' => 'asal_surat.store']) !!}
 
                     @include('asal_surat.fields')
 

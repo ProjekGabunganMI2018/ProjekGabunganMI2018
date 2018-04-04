@@ -1,13 +1,4 @@
 <?php
-<<<<<<< HEAD
-/**
- * Created by PhpStorm.
- * User: Acer
- * Date: 03/04/2018
- * Time: 14:42
- */
-=======
-
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
@@ -54,4 +45,3 @@ class SuratKeluarController extends Controller
         return view('Suratkeluar.show'.compact('list_Suratkeluar'));
     }
 }
->>>>>>> origin/master

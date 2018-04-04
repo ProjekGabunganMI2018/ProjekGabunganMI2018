@@ -7,11 +7,10 @@
         </h1>
     </section>
     <div class="content">
-        @include('adminlte-templates::common.errors')
         <div class="box box-primary">
             <div class="box-body">
                 <div class="row">
-                    {!! Form::model($AsalSurat, ['route' => ['asalSurat.update', $jenisSurat->id], 'method' => 'patch']) !!}
+                    {!! Form::model($asalsurat, ['route' => ['asal_surat.update', $asalsurat->id], 'method' => 'patch']) !!}
 
                     @include('asal_surat.fields')
 
