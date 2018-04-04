@@ -12,7 +12,7 @@ class AsalSurat extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $table = 'AsalSurat';
+    protected $table = 'asal_surat';
 
     const CREATED_AT = 'created_at';
 

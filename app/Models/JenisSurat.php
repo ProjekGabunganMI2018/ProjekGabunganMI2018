@@ -12,7 +12,7 @@ class JenisSurat extends Model
 
     protected $dates = ['deleted_at'];
 
-    protected $table = 'JenisSurat';
+    protected $table = 'jenis_surat';
 
     const CREATED_AT = 'created_at';
 
