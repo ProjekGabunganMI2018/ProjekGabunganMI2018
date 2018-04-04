@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Jenis Surat
+            Asal Surat
         </h1>
     </section>
     <div class="content">
@@ -12,7 +12,7 @@
 
             <div class="box-body">
                 <div class="row">
-                    {!! Form::open(['route' => 'jenisSurats.store']) !!}
+                    {!! Form::open(['route' => 'asalSurats.store']) !!}
 
                     @include('jenis_surats.fields')
 

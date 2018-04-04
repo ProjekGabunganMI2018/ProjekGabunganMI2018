@@ -1,11 +1,23 @@
-<html>
-<body>
+@extends('layouts.app')
 
-<h2>Form Asal Surat</h2>
-<form action="/AsalSurat/{{$list_asalsurat->id}}" method="post" >
-    <input type="hidden" name="_method" value="PATCH"/>
-    @include('AsalSurat.form')
-</form>
+@section('content')
+    <section class="content-header">
+        <h1>
+            Jenis Surat
+        </h1>
+    </section>
+    <div class="content">
+        @include('adminlte-templates::common.errors')
+        <div class="box box-primary">
+            <div class="box-body">
+                <div class="row">
+                    {!! Form::model($jenisSurat, ['route' => ['jenisSurats.update', $jenisSurat->id], 'method' => 'patch']) !!}
 
-</body>
-</html>
+                    @include('jenis_surats.fields')
+
+                    {!! Form::close() !!}
+                </div>
+            </div>
+        </div>
+    </div>
+@endsection

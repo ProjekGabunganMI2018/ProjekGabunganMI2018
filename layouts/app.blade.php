@@ -37,7 +37,7 @@
 
             <!-- Logo -->
             <a href="#" class="logo">
-                <b>MI OM</b>
+                <b>Aplikasi Surat Manajamen Informatika</b>
             </a>
 
             <!-- Header Navbar -->
@@ -100,7 +100,7 @@
 
         <!-- Main Footer -->
         <footer class="main-footer" style="max-height: 100px;text-align: center">
-            <strong>Copyright © 2016 <a href="#">Company</a>.</strong> All rights reserved.
+            <strong>Copyright © 2018 <a href="#">Company</a>.</strong> All rights reserved.
         </footer>
 
     </div>
