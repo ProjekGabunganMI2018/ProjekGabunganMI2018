@@ -39,3 +39,8 @@ Route::resource('disposisi', 'DisposisiController');
 Route::get('/JenisSurat', 'JenisSuratController@index');
 
 Route::resource('jenis_surat', 'JenisSuratController');
+
+
+Route::get('/SuratMasuk', 'SuratMasukController@index');
+
+Route::resource('surat_masuk', 'SuratMasukController');
