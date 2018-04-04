@@ -15,22 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 
 
 Route::get('/AsalSurat', 'AsalSuratController@index');
 
 Route::resource('asal_surat', 'AsalSuratController');
 
+Auth::routes();
 
-Route::get('/Disposisi', 'DisposisiController@index');
-
-Route::resource('disposisi', 'DisposisiController');
+Route::get('/home', 'HomeController@index')->name('home');
