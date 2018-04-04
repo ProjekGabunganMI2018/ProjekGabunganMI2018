@@ -1,19 +1,20 @@
-<!DOCTYPE html>
 <html>
-<head>
-</head>
 <body>
-<h2>Asal Surat</h2>
 
-<form action="/AsalSurat" method="post">
+<h2>Form Jenis Surat</h2>
+<form action="/JenisSurat" method="post" >
+
     {{csrf_field()}}
-    Nama : <input type="text" name="nama"><br>
-    Instansi : <input type="text" name="instansi"><br>
-    Kontak : <input type="text" name="kontak"><br>
-    Alamat : <input type="text" name="alamat"><br>
-    Keterangan : <input type="text" name="keterangan"><br>
-    <input type="submit" value="submit">
+    nama   : <input type="text" name="nama" ><br>
+    format surat  : <input type="text" name="format_surat" ><br>
+    keterangan	: <input type="text" name="keterangan"  ><br>
+    
+
+
+    <input type="submit" value="Submit">
+
+
 </form>
-</div>
+
 </body>
 </html>
