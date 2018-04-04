@@ -3,7 +3,7 @@
 @section('content')
     <section class="content-header">
         <h1>
-            Jenis Surat
+            Asal Surat
         </h1>
     </section>
     <div class="content">
@@ -11,9 +11,9 @@
         <div class="box box-primary">
             <div class="box-body">
                 <div class="row">
-                    {!! Form::model($jenisSurat, ['route' => ['jenisSurats.update', $jenisSurat->id], 'method' => 'patch']) !!}
+                    {!! Form::model($AsalSurat, ['route' => ['asalSurat.update', $jenisSurat->id], 'method' => 'patch']) !!}
 
-                    @include('jenis_surats.fields')
+                    @include('asal_suraat.fields')
 
                     {!! Form::close() !!}
                 </div>

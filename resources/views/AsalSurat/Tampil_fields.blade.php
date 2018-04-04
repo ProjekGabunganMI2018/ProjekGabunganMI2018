@@ -1,42 +1,54 @@
 <!-- Id Field -->
 <div class="form-group">
     {!! Form::label('id', 'Id:') !!}
-    <p>{!! $jenisSurat->id !!}</p>
+    <p>{!! $asalSurat->id !!}</p>
 </div>
 
 <!-- Nama Field -->
 <div class="form-group">
     {!! Form::label('nama', 'Nama:') !!}
-    <p>{!! $jenisSurat->nama !!}</p>
+    <p>{!! $asalSurat->nama !!}</p>
 </div>
 
-<!-- Format Surat Field -->
+<!-- Instansi Field -->
 <div class="form-group">
-    {!! Form::label('format_surat', 'Format Surat:') !!}
-    <p>{!! $jenisSurat->format_surat !!}</p>
+    {!! Form::label('instansi', 'Instansi:') !!}
+    <p>{!! $asalSurat->instansi !!}</p>
+</div>
+
+<!-- Kontak Field -->
+<div class="form-group">
+    {!! Form::label('kontak', 'Kontak:') !!}
+    <p>{!! $asalSurat->kontak !!}</p>
+</div>
+
+<!-- Alamat Field -->
+<div class="form-group">
+    {!! Form::label('alamat', 'Alamat:') !!}
+    <p>{!! $asalSurat->alamat !!}</p>
 </div>
 
 <!-- Keterangan Field -->
 <div class="form-group">
     {!! Form::label('keterangan', 'Keterangan:') !!}
-    <p>{!! $jenisSurat->keterangan !!}</p>
+    <p>{!! $asalSurat->keterangan !!}</p>
 </div>
 
 <!-- Created At Field -->
 <div class="form-group">
     {!! Form::label('created_at', 'Created At:') !!}
-    <p>{!! $jenisSurat->created_at !!}</p>
+    <p>{!! $asalSurat->created_at !!}</p>
 </div>
 
 <!-- Updated At Field -->
 <div class="form-group">
     {!! Form::label('updated_at', 'Updated At:') !!}
-    <p>{!! $jenisSurat->updated_at !!}</p>
+    <p>{!! $asalSurat->updated_at !!}</p>
 </div>
 
 <!-- Deleted At Field -->
 <div class="form-group">
     {!! Form::label('deleted_at', 'Deleted At:') !!}
-    <p>{!! $jenisSurat->deleted_at !!}</p>
+    <p>{!! $asalSurat->deleted_at !!}</p>
 </div>
 
