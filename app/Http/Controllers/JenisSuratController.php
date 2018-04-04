@@ -7,7 +7,7 @@ class JenisSuratController extends Controller
 {
     public function create()
     {
-        return view('JenisSurat.create');
+        return view('jenis_surat.create');
     }
 
     public function store(Request $request){
@@ -15,35 +15,35 @@ class JenisSuratController extends Controller
 
         JenisSurat::create($input);
 
-        return redirect('/JenisSurat');
+        return redirect('jenis_surat');
     }
 
     public function index(){
         $list_jenissurat=JenisSurat::all();
-        return view('JenisSurat.index',compact('list_jenissurat'));
+        return view('jenis_surat.index',compact('list_jenissurat'));
     }
 
     public function destroy($id){
-        $list_jenissurat=JenisSurat::where('id',$id)->delete();
-        return redirect('/JenisSurat');
+        $jenissurat=JenisSurat::where('id',$id)->delete();
+        return redirect('jenis_surat');
     }
     public function edit($id) {
-        $list_jenissurat=JenisSurat::where('id',$id)->first();
-        return view('JenisSurat.edit',compact('list_jenissurat'));
+        $jenissurat=JenisSurat::where('id',$id)->first();
+        return view('jenis_surat.edit',compact('jenissurat'));
 
     }
     public function update($id, Request $request){
         $input=$request->except(['_method','_token']);
 
-        $list_jenissurat=JenisSurat::where('id',$id)->update($input);
+        $jenissurat=JenisSurat::where('id',$id)->first()->update($input);
 
-        return redirect('/JenisSurat');
+        return redirect('jenis_surat');
     }
 
     public function show($id){
-        $list_jenissurat=JenisSurat::where('id',$id)->first();
+        $jenissurat=JenisSurat::where('id',$id)->first();
 
-        return view('JenisSurat.show',compact('list_jenissurat'));
+        return view('jenis_surat.show',compact('jenissurat'));
     }
 
 
