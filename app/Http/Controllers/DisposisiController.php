@@ -14,35 +14,35 @@ class DisposisiController extends Controller
     public function store(Request $request){
         $input=$request->all();
 
-        AsalSurat::create($input);
+        Disposis::create($input);
 
         return redirect('asal_surat');
     }
 
     public function index(){
-        $list_asalsurat=AsalSurat::all();
+        $Disposis=Disposis::all();
         return view('asal_surat.index',compact('list_asalsurat'));
     }
 
     public function destroy($id){
-        $asalsurat=AsalSurat::where('id',$id)->delete();
+        $Disposis=Disposis::where('id',$id)->delete();
         return redirect('asal_surat');
     }
     public function edit($id) {
-        $asalsurat=AsalSurat::where('id',$id)->first();
+        $Disposis=Disposis::where('id',$id)->first();
         return view('asal_surat.edit',compact('asalsurat'));
 
     }
     public function update($id, Request $request){
         $input=$request->except(['_method','_token']);
 
-        $asalsurat=AsalSurat::where('id',$id)->first()->update($input);
+        $Disposis=Disposis::where('id',$id)->first()->update($input);
 
         return redirect('asal_surat');
     }
 
     public function show($id){
-        $asalsurat=AsalSurat::where('id',$id)->first();
+        $Disposis=Disposis::where('id',$id)->first();
 
         return view('asal_surat.show',compact('asalsurat'));
     }
