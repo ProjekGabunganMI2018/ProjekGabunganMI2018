@@ -11,7 +11,7 @@
             <div class="box-body">
                 <div class="row" style="padding-left: 20px">
                     @include('asal_surat.Tampil_field')
-                    <a href="{!! route('AsalSurat.index') !!}" class="btn btn-default">Back</a>
+                    <a href="{!! route('asal_surat') !!}" class="btn btn-default">Back</a>
                 </div>
             </div>
         </div>

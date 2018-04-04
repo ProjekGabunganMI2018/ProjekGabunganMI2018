@@ -8,7 +8,7 @@ class AsalSuratController extends Controller
 {
     public function create()
     {
-        return view('AsalSurat.create');
+        return view('asal_surat.create');
     }
 
     public function store(Request $request){

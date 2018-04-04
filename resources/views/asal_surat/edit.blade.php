@@ -13,7 +13,7 @@
                 <div class="row">
                     {!! Form::model($AsalSurat, ['route' => ['asalSurat.update', $jenisSurat->id], 'method' => 'patch']) !!}
 
-                    @include('asal_suraat.fields')
+                    @include('asal_surat.fields')
 
                     {!! Form::close() !!}
                 </div>
