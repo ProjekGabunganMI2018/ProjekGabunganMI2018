@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\JenisSurat;
+use App\Models\JenisSurat;
 class JenisSuratController extends Controller
 {
     public function create()
