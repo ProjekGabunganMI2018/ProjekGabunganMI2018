@@ -14,33 +14,33 @@ class SuratKeluarController extends Controller
 
         Suratkeluar::create($input);
 
-        return redirect('/Suratkeluar');
+        return redirect('Suratkeluar');
     }
     public function index (){
         $list_suratkeluar=Suratkeluar::all();
-        return view('Suratkeluar.index',compact('list_Suratkeluar'));
+        return view('Suratkeluar.index',compact('suratkeluar'));
 
     }
 
     public function destroy($id){
-        $list_suratkeluar=Suratkeluar::where('id',$id)->delete();
-        return redirect('/Suratkeluar');
+        $suratkeluar=Suratkeluar::where('id',$id)->delete();
+        return redirect('Suratkeluar');
 
     }
     public function edit($id){
-        $list_suratkeluar=Jenissurat::where('id',$id)->first();
-        return view('Suratkeluar.edit',compact('list_Suratkeluar'));
+        $suratkeluar=Jenissurat::where('id',$id)->first();
+        return view('Suratkeluar.edit',compact('suratkeluar'));
 
     }
     public function update($id, Request $request){
         $input=$request->except(['_method','token']);
 
-        $list_suratkeluar=Suratkeluar::where('id',$id)->first();
+        $suratkeluar=Suratkeluar::where('id',$id)->first();
 
         return redirect('/Suratkeluar');
     }
     public function show($id){
-        $list_suratkeluar=Suratkeluar::where('id',$id)->first();
+        $suratkeluar=Suratkeluar::where('id',$id)->first();
 
         return view('Suratkeluar.show'.compact('list_Suratkeluar'));
     }
