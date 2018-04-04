@@ -21,7 +21,7 @@ class Disposisi extends Model
     protected $fillable = [
 
         'surat_masuk_id','pembuat_disposisi_id','penerima_disposisi_id',
-        'asal_disposisi','keterangan'
+        'asal_disposisi_id','keterangan'
 
     ];
 

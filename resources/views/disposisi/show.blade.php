@@ -1,3 +1,9 @@
+/**
+ * Created by PhpStorm.
+ * User: Luis Ismail
+ * Date: 04/04/2018
+ * Time: 20.35
+ */
 @extends('layouts.app')
 
 @section('content')
@@ -9,12 +15,9 @@
     <div class="content">
         <div class="box box-primary">
             <div class="box-body">
-                <div class="row">
-                    {!! Form::model($disposisi, ['route' => ['disposisi.update', $disposisi->id], 'method' => 'patch']) !!}
-
-                    @include('disposisi.fields')
-
-                    {!! Form::close() !!}
+                <div class="row" style="padding-left: 20px">
+                    @include('disposisi.show_fields')
+                    <a href="{!! route('disposisi.index') !!}" class="btn btn-default">Back</a>
                 </div>
             </div>
         </div>
