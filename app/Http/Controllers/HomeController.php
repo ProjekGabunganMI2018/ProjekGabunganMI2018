@@ -1,13 +1,28 @@
 <?php
-    namespace App\Http\Controllers;
 
-    use Illuminate\Http\Request;
-        class testController extends Controller
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+class HomeController extends Controller
 {
-    //mengampu request test dari web.php
-    public function test()
+    /**
+     * Create a new controller instance.
+     *
+     * @return void
+     */
+    public function __construct()
     {
-        //menampilkan halaman view di lokasi resources/views/test.blade.php
-        return view('test');
+        $this->middleware('auth');
+    }
+
+    /**
+     * Show the application dashboard.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function index()
+    {
+        return view('home');
     }
 }
