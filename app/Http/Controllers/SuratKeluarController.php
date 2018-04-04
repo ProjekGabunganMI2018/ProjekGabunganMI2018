@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\Suratkeluar;
+use App\Models\SuratKeluar;
 
 class SuratKeluarController extends Controller
 {
@@ -22,7 +22,7 @@ class SuratKeluarController extends Controller
 
     public function index (){
         $list_suratkeluar=SuratKeluar::all();
-        return view('surat_keluar.index',compact('list_suratkeluar'));
+        return view('surat_keluar.index',compact('list_SuratKeluar'));
     }
 
     public function destroy($id){
@@ -31,7 +31,7 @@ class SuratKeluarController extends Controller
     }
     public function edit($id){
         $suratkeluar=SuratKeluar::where('id',$id)->first();
-        return view('surat_keluar.edit',compact('suratkeluar'));
+        return view('surat_keluar.edit',compact('SuratKeluar'));
 
     }
     public function update($id, Request $request){
