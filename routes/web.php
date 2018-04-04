@@ -44,3 +44,8 @@ Route::resource('jenis_surat', 'JenisSuratController');
 Route::get('/SuratMasuk', 'SuratMasukController@index');
 
 Route::resource('surat_masuk', 'SuratMasukController');
+
+
+Route::get('/SuraKeluar', 'SuratKeluarController@index');
+
+Route::resource('surat_keluar', 'SuratKeluarController');

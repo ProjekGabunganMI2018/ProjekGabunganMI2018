@@ -4,49 +4,49 @@
     <p>{!! $suratkeluar->id !!}</p>
 </div>
 
-<!-- Nama Field -->
+<!-- Nomer Surat Field -->
 <div class="form-group">
     {!! Form::label('nomor_surat', 'Nomor surat:') !!}
     <p>{!! $suratkeluar->nomor_surat !!}</p>
 </div>
 
-<!-- Instansi Field -->
+<!-- Perihal Field -->
 <div class="form-group">
     {!! Form::label('perihal', 'Perihal:') !!}
     <p>{!! $suratkeluar->perihal !!}</p>
 </div>
 
-<!-- Kontak Field -->
+<!-- Isi Field -->
 <div class="form-group">
     {!! Form::label('isi', 'Isi:') !!}
     <p>{!! $suratkeluar->isi !!}</p>
 </div>
 
-<!-- Alamat Field -->
+<!-- Peminta Surat Field -->
 <div class="form-group">
-    {!! Form::label('peminta_surat', 'Peminta surat:') !!}
-    <p>{!! $suratkeluar->peminta_surat !!}</p>
+    {!! Form::label('peminta_surat_id', 'Peminta surat:') !!}
+    <p>{!! $suratkeluar->peminta_surat_id !!}</p>
 </div>
 
-<!-- Keterangan Field -->
+<!-- Pembuat Surat Field -->
 <div class="form-group">
-    {!! Form::label('pembuat_surat', 'Pembuat surat:') !!}
-    <p>{!! $suratkeluar-> pembuat_surat!!}</p>
+    {!! Form::label('pembuat_surat_id', 'Pembuat surat:') !!}
+    <p>{!! $suratkeluar-> pembuat_surat_id!!}</p>
 </div>
 
-<!-- Created At Field -->
+<!-- Surat Masuk Field -->
 <div class="form-group">
-    {!! Form::label('surat_masuk', 'Surat masuk:') !!}
-    <p>{!! $suratkeluar->surat_masuk !!}</p>
+    {!! Form::label('surat_masuk_id', 'Surat masuk:') !!}
+    <p>{!! $suratkeluar->surat_masuk_id !!}</p>
 </div>
 
-<!-- Updated At Field -->
+<!-- File Field -->
 <div class="form-group">
     {!! Form::label('file', 'File:') !!}
     <p>{!! $suratkeluar->file !!}</p>
 </div>
 
-<!-- Deleted At Field -->
+<!-- Keterangan At Field -->
 <div class="form-group">
     {!! Form::label('keterangan', 'Keterangan:') !!}
     <p>{!! $suratkeluar->keterangan !!}</p>

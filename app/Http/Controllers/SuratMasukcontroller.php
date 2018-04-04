@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class SuratMasukController extends Controller
 {
- public function create()
+    public function create()
     {
         return view('surat_masuk.create');
     }

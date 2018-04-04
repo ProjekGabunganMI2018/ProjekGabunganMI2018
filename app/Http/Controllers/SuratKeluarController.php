@@ -1,47 +1,49 @@
 <?php
+
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Suratkeluar;
+
 class SuratKeluarController extends Controller
 {
-    public function create(){
-        return view ('Suratkeluar.create');
+    public function create()
+    {
+        return view ('surat_keluar.create');
 
     }
     public function store(Request $request){
         $input=$request->all();
 
-        Suratkeluar::create($input);
+        SuratKeluar::create($input);
 
-        return redirect('Suratkeluar');
+        return redirect('surat_keluar');
     }
-    public function index (){
-        $list_suratkeluar=Suratkeluar::all();
-        return view('Suratkeluar.index',compact('suratkeluar'));
 
+    public function index (){
+        $list_suratkeluar=SuratKeluar::all();
+        return view('surat_keluar.index',compact('list_suratkeluar'));
     }
 
     public function destroy($id){
-        $suratkeluar=Suratkeluar::where('id',$id)->delete();
-        return redirect('Suratkeluar');
-
+        $suratkeluar=SuratKeluar::where('id',$id)->delete();
+        return redirect('surat_keluar');
     }
     public function edit($id){
-        $suratkeluar=Jenissurat::where('id',$id)->first();
-        return view('Suratkeluar.edit',compact('suratkeluar'));
+        $suratkeluar=SuratKeluar::where('id',$id)->first();
+        return view('surat_keluar.edit',compact('suratkeluar'));
 
     }
     public function update($id, Request $request){
         $input=$request->except(['_method','token']);
 
-        $suratkeluar=Suratkeluar::where('id',$id)->first();
+        $suratkeluar=SuratKeluar::where('id',$id)->first();
 
-        return redirect('/Suratkeluar');
+        return redirect('surat_keluar');
     }
     public function show($id){
-        $suratkeluar=Suratkeluar::where('id',$id)->first();
+        $suratkeluar=SuratKeluar::where('id',$id)->first();
 
-        return view('Suratkeluar.show'.compact('suratkeluar'));
+        return view('surat_keluar.show'.compact('suratkeluar'));
     }
 }

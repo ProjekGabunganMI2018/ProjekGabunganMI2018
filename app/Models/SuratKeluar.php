@@ -4,7 +4,7 @@ namespace App\Models;
 
 use Eloquent as Model;
 
-use Illuminate\Database\Eloquent\SoftDeteles;
+use Illuminate\Database\Eloquent\SoftDeletes;
 
 class SuratKeluar extends Model
 {
@@ -20,7 +20,7 @@ class SuratKeluar extends Model
 
     protected $fillable = [
 
-        'nomor_surat','perihal','isi'
+        'nomor_surat','perihal','isi','jenis_surat_id','peminta_surat_id','pembuat_surat_id','surat_masuk_id','file','keterangan'
 
     ];
 
