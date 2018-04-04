@@ -42,6 +42,6 @@ class SuratKeluarController extends Controller
     public function show($id){
         $suratkeluar=Suratkeluar::where('id',$id)->first();
 
-        return view('Suratkeluar.show'.compact('list_Suratkeluar'));
+        return view('Suratkeluar.show'.compact('suratkeluar'));
     }
 }
