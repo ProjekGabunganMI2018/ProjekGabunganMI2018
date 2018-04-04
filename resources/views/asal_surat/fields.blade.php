@@ -4,7 +4,13 @@
     {!! Form::text('nama', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Format Surat Field -->
+<!-- Instansi Field -->
+<div class="form-group col-sm-12 col-lg-12">
+    {!! Form::label('instansi', 'Instansi:') !!}
+    {!! Form::textarea('instansi', null, ['class' => 'form-control']) !!}
+</div>
+
+<!-- Kontak Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('format_surat', 'Format Surat:') !!}
     {!! Form::textarea('format_surat', null, ['class' => 'form-control']) !!}
@@ -19,7 +25,7 @@
 <!-- Submit Field -->
 <div class="form-group col-sm-12">
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
-    <a href="{!! route('asalSurat.index') !!}" class="btn btn-default">Cancel</a>
+    <a href="{!! route('asal_surat.index') !!}" class="btn btn-default">Cancel</a>
 </div>
 
 <script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>

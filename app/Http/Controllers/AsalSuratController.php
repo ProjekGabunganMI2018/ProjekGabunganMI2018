@@ -8,7 +8,7 @@ class AsalSuratController extends Controller
 {
     public function create()
     {
-        return view('AsalSurat.create');
+        return view('asal_surat.create');
     }
 
     public function store(Request $request){
@@ -16,35 +16,35 @@ class AsalSuratController extends Controller
 
         AsalSurat::create($input);
 
-        return redirect('/AsalSurat');
+        return redirect('asal_surat');
     }
 
     public function index(){
         $list_asalsurat=AsalSurat::all();
-        return view('AsalSurat.index',compact('list_asalsurat'));
+        return view('asal_surat.index',compact('list_asalsurat'));
     }
 
     public function destroy($id){
-        $list_asalsurat=AsalSurat::where('id',$id)->delete();
-        return redirect('/AsalSurat');
+        $asalsurat=AsalSurat::where('id',$id)->delete();
+        return redirect('asal_surat');
     }
     public function edit($id) {
-        $list_asalsurat=JenisSurat::where('id',$id)->first();
-        return view('AsalSurat.edit',compact('list_asalsurat'));
+        $asalsurat=AsalSurat::where('id',$id)->first();
+        return view('asal_surat.edit',compact('asalsurat'));
 
     }
     public function update($id, Request $request){
         $input=$request->except(['_method','_token']);
 
-        $list_asalsurat=AsalSurat::where('id',$id)->update($input);
+        $asalsurat=AsalSurat::where('id',$id)->first()->update($input);
 
-        return redirect('/AsalSurat');
+        return redirect('asal_surat');
     }
 
     public function show($id){
-        $list_asalsurat=AsalSurat::where('id',$id)->first();
+        $asalsurat=AsalSurat::where('id',$id)->first();
 
-        return view('AsalSurat.show',compact('list_asalsurat'));
+        return view('asal_surat.show',compact('asalsurat'));
     }
 
 

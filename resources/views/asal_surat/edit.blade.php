@@ -9,9 +9,12 @@
     <div class="content">
         <div class="box box-primary">
             <div class="box-body">
-                <div class="row" style="padding-left: 20px">
-                    @include('asal_surat.Tampil_field')
-                    <a href="{!! route('AsalSurat.index') !!}" class="btn btn-default">Back</a>
+                <div class="row">
+                    {!! Form::model($asalsurat, ['route' => ['asal_surat.update', $asalsurat->id], 'method' => 'patch']) !!}
+
+                    @include('asal_surat.fields')
+
+                    {!! Form::close() !!}
                 </div>
             </div>
         </div>

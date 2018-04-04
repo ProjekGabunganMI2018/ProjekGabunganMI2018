@@ -1452,6 +1452,18 @@
         },
         {
             "name": "symfony/css-selector",
+<<<<<<< HEAD
+            "version": "v4.0.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/css-selector.git",
+                "reference": "03f965583147957f1ecbad7ea1c9d6fd5e525ec2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/css-selector/zipball/03f965583147957f1ecbad7ea1c9d6fd5e525ec2",
+                "reference": "03f965583147957f1ecbad7ea1c9d6fd5e525ec2",
+=======
             "version": "v3.4.7",
             "source": {
                 "type": "git",
@@ -1462,6 +1474,7 @@
                 "type": "zip",
                 "url": "https://api.github.com/repos/symfony/css-selector/zipball/519a80d7c1d95c6cc0b67f686d15fe27c6910de0",
                 "reference": "519a80d7c1d95c6cc0b67f686d15fe27c6910de0",
+>>>>>>> c05c5080771436622b18341478c6a48bf7e0cc1d
                 "shasum": ""
             },
             "require": {
@@ -1501,7 +1514,11 @@
             ],
             "description": "Symfony CssSelector Component",
             "homepage": "https://symfony.com",
+<<<<<<< HEAD
+            "time": "2018-03-19T22:35:49+00:00"
+=======
             "time": "2018-03-19T22:32:39+00:00"
+>>>>>>> c05c5080771436622b18341478c6a48bf7e0cc1d
         },
         {
             "name": "symfony/debug",
@@ -1561,7 +1578,11 @@
         },
         {
             "name": "symfony/event-dispatcher",
+<<<<<<< HEAD
+            "version": "v4.0.7",
+=======
             "version": "v3.4.7",
+>>>>>>> c05c5080771436622b18341478c6a48bf7e0cc1d
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/event-dispatcher.git",
@@ -2060,7 +2081,11 @@
         },
         {
             "name": "symfony/translation",
+<<<<<<< HEAD
+            "version": "v4.0.7",
+=======
             "version": "v3.4.7",
+>>>>>>> c05c5080771436622b18341478c6a48bf7e0cc1d
             "source": {
                 "type": "git",
                 "url": "https://github.com/symfony/translation.git",

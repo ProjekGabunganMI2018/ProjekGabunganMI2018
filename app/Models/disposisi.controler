@@ -1,0 +1,28 @@
+<?php
+
+namespace App\Http\Controllers\Auth;
+use App\Http\Controllers\Controller;
+use App\Models\AsalSurat;
+use Illuminate\Foundation\Auth\AuthenticatesUsers;
+
+class DisposisController extends Controller
+{
+    public function create()
+    {
+        return view('AsalSurat.create');
+    }
+    public function store(Request $request){
+        $input=$request->all();
+
+        Disposis::create($input);
+
+        return redirect('/index');
+    }
+}
+public function index(){
+      $data = $this->db->query("SELECT * FROM disposis");
+           foreach ($data->result_array() as $disposis) {
+                echo "suratMasuk : ".$disposis['suratMasuk']."<br/>";
+                echo "SuratKeluar : ".$disposis['SuratKeluart']."<hr/>";
+           }
+ }

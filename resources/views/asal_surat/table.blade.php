@@ -10,7 +10,7 @@
     </tr>
     </thead>
     <tbody>
-    @foreach($AsalSurat as $asalSurat)
+    @foreach($list_asalsurat as $AsalSurat)
         <tr>
             <td>{!! $AsalSurat->nama !!}</td>
             <td>{!! $AsalSurat->instansi !!}</td>
@@ -18,10 +18,10 @@
             <td>{!! $AsalSurat->alamat !!}</td>
             <td>{!! $AsalSurat->keterangan !!}</td>
             <td>
-                {!! Form::open(['route' => ['$asalSurat.destroy', $asalSurat->id], 'method' => 'delete']) !!}
+                {!! Form::open(['route' => ['asal_surat.destroy', $AsalSurat->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
-                    <a href="{!! route('$asalSurat.show', [$asalSurat->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                    <a href="{!! route('$asalSurat.edit', [$asalSurat->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
+                    <a href="{!! route('asal_surat.show', [$AsalSurat->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                    <a href="{!! route('asal_surat.edit', [$AsalSurat->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                     {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Are you sure?')"]) !!}
                 </div>
                 {!! Form::close() !!}

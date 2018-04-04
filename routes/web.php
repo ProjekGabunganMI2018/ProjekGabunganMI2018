@@ -19,4 +19,8 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+<<<<<<< HEAD
 Route::get('/AsalSurat', 'AsalSuratController@index');
+=======
+Route::resource('asal_surat', 'AsalSuratController');
+>>>>>>> 768ef618a4528e32a5f15f49a918e67fdd8cbdea
