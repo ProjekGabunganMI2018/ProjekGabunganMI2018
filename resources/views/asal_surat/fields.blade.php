@@ -16,6 +16,12 @@
     {!! Form::textarea('kontak', null, ['class' => 'form-control']) !!}
 </div>
 
+<!-- Alamat Field -->
+<div class="form-group col-sm-12 col-lg-12">
+    {!! Form::label('alamat', 'Alamat:') !!}
+    {!! Form::textarea('alamat', null, ['class' => 'form-control']) !!}
+</div>
+
 <!-- Keterangan Field -->
 <div class="form-group col-sm-6">
     {!! Form::label('keterangan', 'Keterangan:') !!}
