@@ -20,38 +20,32 @@ class SuratMasuk extends Model
 
     protected $fillable = [
 
-        'no_surat','tanggal','perihal','isi','keterangan','file'
+        'no_surat', 'tanggal', 'perihal', 'isi', 'keterangan', 'file', 'jenis_surat_id', 'penyimpan_surat_id', 'asal_surat_id', 'tujuan_user_id'
 
     ];
 
 
     protected $primaryKey = 'no_surat';
 
-    public function RelasiSuratMasuk()
+    public function jenis_surat()
     {
-        return $this->hasMany('App\Models\SuratKeluar', 'no_surat');
+        return $this->belongsTo('App\Models\JenisSurat', 'jenis_surat_id');
     }
 
-    public function RelasiSuratMasuk2()
+    public function penyimpan_surat()
     {
-        return $this->belongsTo('App\Models\AsalSurat');
-    }
-
-
-    public function RelasiSuratMasuk3()
-    {
-        return $this->belongsTo('App\Models\JenisSurat');
+        return $this->belongsTo('App\User', 'penyimpan_surat_id');
     }
 
 
-    public function RelasiSuratMasuk4()
+    public function asal_surat()
     {
-        return $this->belongsTo('App\Models\User');
+        return $this->belongsTo('App\Models\AsalSurat', 'asal_surat_id');
     }
 
 
-    public function RelasiSuratMasuk5()
+    public function tujuan_surat()
     {
-        return $this->hasMany('App\Models\Disposisi');
+        return $this->belongsTo('App\User', 'tujuan_users_id');
     }
 }
