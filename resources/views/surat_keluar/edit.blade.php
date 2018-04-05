@@ -20,3 +20,18 @@
         </div>
     </div>
 @endsection
+
+@section('scripts')
+    <script>
+        $('select#jenis_surat_id').change(function () {
+
+            var jenis_surat_id = this.value;
+            var url= "{{url("format_jenis_surat")}}"+"/"+jenis_surat_id;
+            $.get(url,
+                function(myObject){
+                    $('textarea#isi').val(myObject);
+                    CKEDITOR.instances["isi"].document.$.body.innerHTML=myObject;
+                });
+        });
+    </script>
+@endsection

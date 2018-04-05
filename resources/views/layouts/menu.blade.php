@@ -1,4 +1,5 @@
-    <li class="{{  Request::is('roles*')||Request::is('permissions*')||Request::is('user_role*')||Request::is('users*') ? 'active' : '' }} treeview">
+@role((['administrator']))
+<li class="{{  Request::is('roles*')||Request::is('permissions*')||Request::is('user_role*')||Request::is('users*') ? 'active' : '' }} treeview">
         <a href="#">
             <i class="fa fa-cog"></i> <span>Pengaturan Role & User</span>
             <span class="pull-right-container">
@@ -22,7 +23,9 @@
             </li>
         </ul>
     </li>
+@endrole
 
+@role((['admin_prodi']))
     <li class="{{  Request::is('jenis_surat*')||Request::is('asal_surat*') ? 'active' : '' }} treeview">
         <a href="#">
             <i class="	fa fa-cubes"></i> <span>Master Data</span>
@@ -40,12 +43,17 @@
             </li>
         </ul>
     </li>
+@endrole
 
-
+@role((['admin_prodi','dosen']))
 <li class="{{ Request::is('surat_masuk*') ? 'active' : '' }}">
     <a href="{!! route('surat_masuk.index') !!}"><i class="fa fa-edit"></i><span>Surat Masuk</span></a>
 </li>
+@endrole
 
+@role((['admin_prodi','dosen','mahasiswa']))
 <li class="{{ Request::is('surat_keluar*') ? 'active' : '' }}">
 <a href="{!! route('surat_keluar.index') !!}"><i class="fa fa-edit"></i><span>Surat Keluar</span></a>
 </li>
+
+@endrole
