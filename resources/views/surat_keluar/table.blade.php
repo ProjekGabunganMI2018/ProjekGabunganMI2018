@@ -14,22 +14,22 @@
     </tr>
     </thead>
     <tbody>
-    @foreach($list_suratkeluar as $surat_keluar)
+    @foreach($list_suratkeluar as $SuratKeluar)
         <tr>
-            <td>{!! $surat_keluar->nomor_surat !!}</td>
-            <td>{!! $surat_keluar->perihal !!}</td>
-            <td>{!! $surat_keluar->isi !!}</td>
-            <td>{!! $surat_keluar->jenis_surat_id !!}</td>
-            <td>{!! $surat_keluar->peminta_surat_id !!}</td>
-            <td>{!! $surat_keluar->pembuat_surat_id !!}</td>
-            <td>{!! $surat_keluar->surat_masuk_id !!}</td>
-            <td>{!! $surat_keluar->file !!}</td>
-            <td>{!! $surat_keluar->keterangan !!}</td>
+            <td>{!! $SuratKeluar->nomor_surat !!}</td>
+            <td>{!! $SuratKeluar->perihal !!}</td>
+            <td>{!! $SuratKeluar->isi !!}</td>
+            <td>{!! $SuratKeluar->jenis_surat_id !!}</td>
+            <td>{!! $SuratKeluar->peminta_surat_id !!}</td>
+            <td>{!! $SuratKeluar->pembuat_surat_id !!}</td>
+            <td>{!! $SuratKeluar->surat_masuk_id !!}</td>
+            <td>{!! $SuratKeluar->file !!}</td>
+            <td>{!! $SuratKeluar->keterangan !!}</td>
             <td>
-                {!! Form::open(['route' => ['surat_keluar.destroy', $surat_keluar->id], 'method' => 'delete']) !!}
+                {!! Form::open(['route' => ['surat_keluar.destroy', $SuratKeluar->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
-                    <a href="{!! route('surat_keluar.show', [$surat_keluar->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
-                    <a href="{!! route('surat_keluar.edit', [$surat_keluar->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
+                    <a href="{!! route('surat_keluar.show', [$SuratKeluar->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-eye-open"></i></a>
+                    <a href="{!! route('surat_keluar.edit', [$SuratKeluar->id]) !!}" class='btn btn-default btn-xs'><i class="glyphicon glyphicon-edit"></i></a>
                     {!! Form::button('<i class="glyphicon glyphicon-trash"></i>', ['type' => 'submit', 'class' => 'btn btn-danger btn-xs', 'onclick' => "return confirm('Beneran nih mau dihapus?')"]) !!}
                 </div>
                 {!! Form::close() !!}
