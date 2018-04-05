@@ -23,7 +23,7 @@
         </ul>
     </li>
 
-    <li class="{{  Request::is('jenisSurats*')||Request::is('asalSurats*') ? 'active' : '' }} treeview">
+    <li class="{{  Request::is('jenis_surat*')||Request::is('asal_surat*') ? 'active' : '' }} treeview">
         <a href="#">
             <i class="	fa fa-cubes"></i> <span>Master Data</span>
             <span class="pull-right-container">
@@ -31,12 +31,12 @@
             </span>
         </a>
         <ul class="treeview-menu">
-            <li class="{{ Request::is('jenisSurats*') ? 'active' : '' }}">
-                <a href="{!! route('jenisSurats.index') !!}"><i class="fa fa-edit"></i><span>Jenis Surat</span></a>
+            <li class="{{ Request::is('jenis_surat*') ? 'active' : '' }}">
+                <a href="{!! route('jenis_surat.index') !!}"><i class="fa fa-edit"></i><span>Jenis Surat</span></a>
             </li>
 
-            <li class="{{ Request::is('asalSurats*') ? 'active' : '' }}">
-                <a href="{!! route('asalSurats.index') !!}"><i class="fa fa-edit"></i><span>Asal Surat</span></a>
+            <li class="{{ Request::is('asal_surat*') ? 'active' : '' }}">
+                <a href="{!! route('asal_surat.index') !!}"><i class="fa fa-edit"></i><span>Asal Surat</span></a>
             </li>
         </ul>
     </li>
