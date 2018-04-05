@@ -2,24 +2,10 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\CreateUserRequest;
-use App\Http\Requests\UpdateUserRequest;
-use App\Repositories\UserRepository;
-use App\Http\Controllers\AppBaseController;
+use App\User;
 use Illuminate\Http\Request;
-use Flash;
-use Prettus\Repository\Criteria\RequestCriteria;
-use Response;
 
-class UserController extends AppBaseController
-{
-    /** @var  UserRepository */
-    private $userRepository;
-
-    public function __construct(UserRepository $userRepo)
-    {
-        $this->userRepository = $userRepo;
-    }
+class UserController extends Controller{
 
     /**
      * Display a listing of the User.
@@ -29,8 +15,7 @@ class UserController extends AppBaseController
      */
     public function index(Request $request)
     {
-        $this->userRepository->pushCriteria(new RequestCriteria($request));
-        $users = $this->userRepository->all();
+        $users = User::all();
 
         return view('users.index')
             ->with('users', $users);
@@ -53,13 +38,11 @@ class UserController extends AppBaseController
      *
      * @return Response
      */
-    public function store(CreateUserRequest $request)
+    public function store(Request $request)
     {
         $input = $request->all();
 
-        $user = $this->userRepository->create($input);
-
-        Flash::success('User saved successfully.');
+        $user = User::create($input);
 
         return redirect(route('users.index'));
     }
@@ -73,10 +56,9 @@ class UserController extends AppBaseController
      */
     public function show($id)
     {
-        $user = $this->userRepository->findWithoutFail($id);
+        $user = User::findOrFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
 
             return redirect(route('users.index'));
         }
@@ -93,10 +75,9 @@ class UserController extends AppBaseController
      */
     public function edit($id)
     {
-        $user = $this->userRepository->findWithoutFail($id);
+        $user =User::findOrFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
 
             return redirect(route('users.index'));
         }
@@ -112,19 +93,16 @@ class UserController extends AppBaseController
      *
      * @return Response
      */
-    public function update($id, UpdateUserRequest $request)
+    public function update($id, Request $request)
     {
-        $user = $this->userRepository->findWithoutFail($id);
+        $user = User::findOrFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
 
             return redirect(route('users.index'));
         }
 
-        $user = $this->userRepository->update($request->all(), $id);
-
-        Flash::success('User updated successfully.');
+        $user->update($request->all());
 
         return redirect(route('users.index'));
     }
@@ -138,17 +116,14 @@ class UserController extends AppBaseController
      */
     public function destroy($id)
     {
-        $user = $this->userRepository->findWithoutFail($id);
+        $user = User::findOrFail($id);
 
         if (empty($user)) {
-            Flash::error('User not found');
 
             return redirect(route('users.index'));
         }
 
-        $this->userRepository->delete($id);
-
-        Flash::success('User deleted successfully.');
+        $user->delete();
 
         return redirect(route('users.index'));
     }
