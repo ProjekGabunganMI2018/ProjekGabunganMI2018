@@ -12,26 +12,26 @@
 
 <!-- jenis surat Field -->
 <div class="form-group col-sm-12 col-lg-6">
-    {!! Form::label('jenis_surat_id', 'Jenis Surat :') !!}
-    {!! Form::select('jenis_surat_id', $jenis_surat ,null, ['class' => 'form-control']) !!}
+    {!! Form::label('jenis_surat', 'Jenis Surat :') !!}
+    {!! Form::select('jenis_surat', $jenis_surat ,null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- peminta surat Field -->
 <div class="form-group col-sm-12 col-lg-6">
-    {!! Form::label('peminta_surat_id', 'Peminta Surat :') !!}
-    {!! Form::select('peminta_surat_id', $user , null, ['class' => 'form-control']) !!}
+    {!! Form::label('peminta_surat', 'Peminta Surat :') !!}
+    {!! Form::select('peminta_surat', $user , null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- pembuat surat Field -->
 <div class="form-group col-sm-12 col-lg-6">
-    {!! Form::label('pembuat_surat_id', 'Pembuat Surat :') !!}
-    {!! Form::select('pembuat_surat_id', $user, null, ['class' => 'form-control']) !!}
+    {!! Form::label('pembuat_surat', 'Pembuat Surat :') !!}
+    {!! Form::select('pembuat_surat', $user, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- surat masuk Field -->
 <div class="form-group col-sm-12 col-lg-12">
-    {!! Form::label('surat_masuk_id', 'Surat Masuk :') !!}
-    {!! Form::text('surat_masuk_id', null, ['class' => 'form-control']) !!}
+    {!! Form::label('surat_masuk', 'Surat Masuk :') !!}
+    {!! Form::text('surat_masuk', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- file Field -->
