@@ -18,7 +18,7 @@
         <tr>
             <td>{!! $SuratKeluar->nomor_surat !!}</td>
             <td>{!! $SuratKeluar->perihal !!}</td>
-            <td>{!! $SuratKeluar->jenis_surat_id !!}</td>
+            <td>{!! $SuratKeluar->jenis_surat_id->nama!!}</td>
             <td>{!! $SuratKeluar->peminta_surat_id !!}</td>
             <td>{!! $SuratKeluar->pembuat_surat_id !!}</td>
             <td>{!! $SuratKeluar->surat_masuk_id !!}</td>
