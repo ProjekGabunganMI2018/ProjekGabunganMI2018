@@ -30,15 +30,12 @@ class Disposisi extends Model
     public function pembuat_disposisi()
     {
         return $this->belongsTo('App\User','pembuat_disposisi_id');
-
-
     }
 
     public function penerima_disposisi()
     {
         return $this->belongsTo('App\User','penerima_disposisi_id');
     }
-
 
     public function asal_disposisi()
     {
