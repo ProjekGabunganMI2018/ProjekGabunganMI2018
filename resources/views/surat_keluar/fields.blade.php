@@ -69,5 +69,5 @@
         filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
     };
 
-    CKEDITOR.replace( 'format_surat',options );
+    CKEDITOR.replace( 'isi',options );
 </script>
