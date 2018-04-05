@@ -24,9 +24,9 @@ class AsalSurat extends Model
     ];
 
 
-    public function RelasiAsalSurat()
+    public function surat_masuk()
     {
-        return $this->hasMany('App\Models\JenisSurat');
+        return $this->hasMany('App\Models\SuratMasuk','asal_surat_id');
 
     }
 }

@@ -25,13 +25,13 @@ class JenisSurat extends Model
     ];
 
 
-    public function RelasiJenisSurat()
+    public function surat_keluar()
     {
-        return $this->hasMany('App\Models\SuratKeluar');
+        return $this->hasMany('App\Models\SuratKeluar','jenis_surat_id');
     }
 
-    public function RelasiJenisSurat2()
+    public function surat_masuk()
     {
-        return $this->hasMany('App\Models\SuratMasuk');
+        return $this->hasMany('App\Models\SuratMasuk','jenis_surat_id');
     }
 }

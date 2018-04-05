@@ -27,24 +27,24 @@ class SuratKeluar extends Model
     protected $primaryKey = 'nomor_surat';
 
 
-    public function RelasiSuratKeluar()
+    public function jenis_surat()
     {
-        return $this->belongsTo('App\Models\JenisSurat');
+        return $this->belongsTo('App\Models\JenisSurat','jenis_surat_id');
     }
 
-
-
-    public function RelasiSuratKeluar2()
+    public function peminta_surat()
     {
-        return $this->belongsTo('App\Models\User');
-
+        return $this->belongsTo('App\User','peminta_surat_id');
     }
 
-
-
-    public function RelasiSuratKeluar3()
+    public function  pembuat_surat()
     {
-        return $this->belongsTo('App\Models\SuratMasuk');
+        return $this->belongsTo('App\User','pembuat_surat_id');
+    }
+
+    public function surat_masuk()
+    {
+        return $this->belongsTo('App\Models\SuratMasuk','surat_masuk_id');
 
     }
 
