@@ -32,4 +32,5 @@ Route::resource('jenis_surat', 'JenisSuratController');
 
 Route::resource('surat_masuk', 'SuratMasukController');
 
+
 Route::resource('surat_keluar', 'SuratKeluarController');
