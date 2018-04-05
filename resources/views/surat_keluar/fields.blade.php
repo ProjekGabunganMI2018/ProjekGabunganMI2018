@@ -1,29 +1,29 @@
 <!-- No Surat Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-3">
     {!! Form::label('nomor_surat', 'Nomer Surat :') !!}
     {!! Form::text('nomor_surat', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Perihal Field -->
-<div class="form-group col-sm-6">
+<div class="form-group col-sm-3">
     {!! Form::label('perihal', 'Perihal :') !!}
     {!! Form::text('perihal', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- jenis surat Field -->
-<div class="form-group col-sm-12 col-lg-12">
+<div class="form-group col-sm-12 col-lg-6">
     {!! Form::label('jenis_surat_id', 'Jenis Surat :') !!}
     {!! Form::select('jenis_surat_id', $jenis_surat ,null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- peminta surat Field -->
-<div class="form-group col-sm-12 col-lg-12">
+<div class="form-group col-sm-12 col-lg-6">
     {!! Form::label('peminta_surat_id', 'Peminta Surat :') !!}
     {!! Form::select('peminta_surat_id', $user , null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- pembuat surat Field -->
-<div class="form-group col-sm-12 col-lg-12">
+<div class="form-group col-sm-12 col-lg-6">
     {!! Form::label('pembuat_surat_id', 'Pembuat Surat :') !!}
     {!! Form::select('pembuat_surat_id', $user, null, ['class' => 'form-control']) !!}
 </div>
@@ -35,9 +35,9 @@
 </div>
 
 <!-- file Field -->
-<div class="form-group col-sm-12 col-lg-12">
+<div class="form-group col-sm-12 col-lg-2">
     {!! Form::label('file', 'File :') !!}
-    {!! Form::text('file', null, ['class' => 'form-control']) !!}
+    {!! Form::file('file', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- keterangan Field -->
