@@ -15,37 +15,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
-
-Auth::routes();
-
-Route::get('/home', 'HomeController@index')->name('home');
-
 
 
 Route::get('/AsalSurat', 'AsalSuratController@index');
 
 Route::resource('asal_surat', 'AsalSuratController');
 
+Auth::routes();
 
-Route::get('/Disposisi', 'DisposisiController@index');
-
-Route::resource('disposisi', 'DisposisiController');
-
-
-Route::get('/JenisSurat', 'JenisSuratController@index');
-
-Route::resource('jenis_surat', 'JenisSuratController');
-
-
-Route::get('/SuratMasuk', 'SuratMasukController@index');
-
-Route::resource('surat_masuk', 'SuratMasukController');
-
-
-Route::get('/SuraKeluar', 'SuratKeluarController@index');
-
-Route::resource('surat_keluar', 'SuratKeluarController');
+Route::get('/home', 'HomeController@index')->name('home');
