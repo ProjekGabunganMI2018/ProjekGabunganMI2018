@@ -22,7 +22,7 @@ class SuratKeluarController extends Controller
 
     public function index (){
         $list_suratkeluar=SuratKeluar::all();
-        return view('surat_keluar.index',compact('list_SuratKeluar'));
+        return view('surat_keluar.index',compact('list_suratkeluar'));
     }
 
     public function destroy($id){
