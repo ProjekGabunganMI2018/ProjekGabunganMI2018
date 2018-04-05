@@ -15,6 +15,7 @@
             <div class="box-body">
                 @include('SuratKeluar.table')
             </div>
+            
         </div>
         <div class="text-center">
 
