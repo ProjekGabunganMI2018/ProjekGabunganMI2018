@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JenisSurat;
+use App\User;
 use Illuminate\Http\Request;
 use App\Models\SuratKeluar;
 
@@ -9,7 +11,9 @@ class SuratKeluarController extends Controller
 {
     public function create()
     {
-        return view ('surat_keluar.create');
+        $jenis_surat=JenisSurat::pluck('nama','id');
+        $user=User::pluck('name','id');
+        return view ('surat_keluar.create',compact('jenis_surat','user'));
 
     }
     public function store(Request $request){

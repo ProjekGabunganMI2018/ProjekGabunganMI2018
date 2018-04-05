@@ -1,7 +1,7 @@
 <!-- No Surat Field -->
 <div class="form-group col-sm-6">
-    {!! Form::label('nomer_surat', 'Nomer Surat :') !!}
-    {!! Form::text('nomer_surat', null, ['class' => 'form-control']) !!}
+    {!! Form::label('nomor_surat', 'Nomer Surat :') !!}
+    {!! Form::text('nomor_surat', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- Perihal Field -->
@@ -19,19 +19,19 @@
 <!-- jenis surat Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('jenis_surat_id', 'Jenis Surat :') !!}
-    {!! Form::textarea('jenis_surat_id', null, ['class' => 'form-control']) !!}
+    {!! Form::select('jenis_surat_id', $jenis_surat ,null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- peminta surat Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('peminta_surat_id', 'Peminta Surat :') !!}
-    {!! Form::textarea('peminta_surat_id', null, ['class' => 'form-control']) !!}
+    {!! Form::select('peminta_surat_id', $user , null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- pembuat surat Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('pembuat_surat_id', 'Pembuat Surat :') !!}
-    {!! Form::textarea('pembuat_surat_id', null, ['class' => 'form-control']) !!}
+    {!! Form::select('pembuat_surat_id', $user, null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- surat masuk Field -->
