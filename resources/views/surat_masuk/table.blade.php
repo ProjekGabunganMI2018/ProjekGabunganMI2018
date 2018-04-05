@@ -15,10 +15,10 @@
         <tr>
             <td>{!! $SuratMasuk->no_surat !!}</td>
             <td>{!! $SuratMasuk->tanggal !!}</td>
-            <td>{!! $SuratMasuk->perihak !!}</td>
+            <td>{!! $SuratMasuk->perihal !!}</td>
             <td>{!! $SuratMasuk->isi !!}</td>
-            <td>{!! $SuratMasuk->Keterangan !!}</td>
-            <td>{!! $SuratMasuk->File !!}</td>
+            <td>{!! $SuratMasuk->keterangan !!}</td>
+            <td>{!! $SuratMasuk->file !!}</td>
             <td>
                 {!! Form::open(['route' => ['surat_masuk.destroy', $SuratMasuk->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
