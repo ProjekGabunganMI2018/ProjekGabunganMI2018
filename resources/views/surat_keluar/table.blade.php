@@ -3,13 +3,13 @@
     <tr>
         <th>Nomor surat</th>
         <th>Perihal</th>
-        <th>Isi</th>
         <th>Jenis surat</th>
         <th>Peminta surat</th>
         <th>Pembuat surat</th>
         <th>Surat masuk</th>
         <th>File</th>
         <th>Keterangan</th>
+        <th>Isi</th>
         <th colspan="3">Action</th>
     </tr>
     </thead>
@@ -18,13 +18,13 @@
         <tr>
             <td>{!! $SuratKeluar->nomor_surat !!}</td>
             <td>{!! $SuratKeluar->perihal !!}</td>
-            <td>{!! $SuratKeluar->isi !!}</td>
             <td>{!! $SuratKeluar->jenis_surat_id !!}</td>
             <td>{!! $SuratKeluar->peminta_surat_id !!}</td>
             <td>{!! $SuratKeluar->pembuat_surat_id !!}</td>
             <td>{!! $SuratKeluar->surat_masuk_id !!}</td>
             <td>{!! $SuratKeluar->file !!}</td>
             <td>{!! $SuratKeluar->keterangan !!}</td>
+            <td>{!! $SuratKeluar->isi !!}</td>
             <td>
                 {!! Form::open(['route' => ['surat_keluar.destroy', $SuratKeluar->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>

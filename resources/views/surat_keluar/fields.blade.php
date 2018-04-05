@@ -10,12 +10,6 @@
     {!! Form::text('perihal', null, ['class' => 'form-control']) !!}
 </div>
 
-<!-- Isi Field -->
-<div class="form-group col-sm-12 col-lg-12">
-    {!! Form::label('isi', 'Isi :') !!}
-    {!! Form::textarea('isi', null, ['class' => 'form-control']) !!}
-</div>
-
 <!-- jenis surat Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('jenis_surat_id', 'Jenis Surat :') !!}
@@ -37,20 +31,27 @@
 <!-- surat masuk Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('surat_masuk_id', 'Surat Masuk :') !!}
-    {!! Form::textarea('surat_masuk_id', null, ['class' => 'form-control']) !!}
+    {!! Form::text('surat_masuk_id', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- file Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('file', 'File :') !!}
-    {!! Form::textarea('file', null, ['class' => 'form-control']) !!}
+    {!! Form::text('file', null, ['class' => 'form-control']) !!}
 </div>
 
 <!-- keterangan Field -->
 <div class="form-group col-sm-12 col-lg-12">
     {!! Form::label('keterangan', 'Keterangan :') !!}
-    {!! Form::textarea('keterangan', null, ['class' => 'form-control']) !!}
+    {!! Form::text('keterangan', null, ['class' => 'form-control']) !!}
 </div>
+
+<!-- Isi Field -->
+<div class="form-group col-sm-12 col-lg-12">
+    {!! Form::label('isi', 'Isi :') !!}
+    {!! Form::textarea('isi', null, ['class' => 'form-control']) !!}
+</div>
+
 
 <!-- Submit Field -->
 <div class="form-group col-sm-12">

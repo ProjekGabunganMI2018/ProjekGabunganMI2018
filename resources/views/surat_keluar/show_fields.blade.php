@@ -16,12 +16,6 @@
     <p>{!! $suratkeluar->perihal !!}</p>
 </div>
 
-<!-- Isi Field -->
-<div class="form-group">
-    {!! Form::label('isi', 'Isi:') !!}
-    <p>{!! $suratkeluar->isi !!}</p>
-</div>
-
 <!-- Peminta Surat Field -->
 <div class="form-group">
     {!! Form::label('peminta_surat_id', 'Peminta surat:') !!}
@@ -50,6 +44,12 @@
 <div class="form-group">
     {!! Form::label('keterangan', 'Keterangan:') !!}
     <p>{!! $suratkeluar->keterangan !!}</p>
+</div>
+
+<!-- Isi Field -->
+<div class="form-group">
+    {!! Form::label('isi', 'Isi:') !!}
+    <p>{!! $suratkeluar->isi !!}</p>
 </div>
 
 <div class="form-group">
