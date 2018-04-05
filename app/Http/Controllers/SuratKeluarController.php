@@ -49,5 +49,6 @@ class SuratKeluarController extends Controller
         $suratkeluar=SuratKeluar::where('id',$id)->first();
 
         return view('surat_keluar.show'.compact('suratkeluar'));
+        
     }
 }
