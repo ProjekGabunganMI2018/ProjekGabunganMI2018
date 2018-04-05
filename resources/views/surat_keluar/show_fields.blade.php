@@ -18,19 +18,19 @@
 
 <!-- Peminta Surat Field -->
 <div class="form-group">
-    {!! Form::label('peminta_surat_id', 'Peminta surat:') !!}
+    {!! Form::label('peminta_surat', 'Peminta surat:') !!}
     <p>{!! $suratkeluar->peminta_surat_id !!}</p>
 </div>
 
 <!-- Pembuat Surat Field -->
 <div class="form-group">
-    {!! Form::label('pembuat_surat_id', 'Pembuat surat:') !!}
+    {!! Form::label('pembuat_surat', 'Pembuat surat:') !!}
     <p>{!! $suratkeluar-> pembuat_surat_id!!}</p>
 </div>
 
 <!-- Surat Masuk Field -->
 <div class="form-group">
-    {!! Form::label('surat_masuk_id', 'Surat masuk:') !!}
+    {!! Form::label('surat_masuk', 'Surat masuk:') !!}
     <p>{!! $suratkeluar->surat_masuk_id !!}</p>
 </div>
 
