@@ -27,27 +27,27 @@ class Disposisi extends Model
 
     protected $primaryKey = 'id';
 
-    public function RelasiDisposisi()
+    public function pembuat_disposisi()
     {
-        return $this->belongsTo('App\Models\User');
+        return $this->belongsTo('App\User','pembuat_disposisi_id');
+
 
     }
 
-    public function RelasiDisposisi2()
+    public function penerima_disposisi()
     {
-        return $this->belongsTo('App\Models\SuratMasuk');
+        return $this->belongsTo('App\User','penerima_disposisi_id');
     }
 
 
-    public function RelasiDisposisi3()
+    public function asal_disposisi()
     {
-        return $this->hasMany('App\Models\Disposisi');
+        return $this->hasMany('App\Models\Disposisi','asal_disposisi_id');
     }
 
-
-
-    public function RelasiDisposisi4()
+    public function suratmasuk()
     {
-        return $this->belongsTo('App\Models\Disposisi');
+        return $this->belongsTo('App\Models\SuratMasuk','surat_masuk_id');
     }
+
 }
