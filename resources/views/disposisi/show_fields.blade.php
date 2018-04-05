@@ -18,7 +18,7 @@
 
 <!-- Penerima Field -->
 <div class="form-group">
-    {!! Form::label('penerima_disposisi_id', 'Penerima Disposisi :') !!}
+    {!! Form::label('penerima_disposisi_id', 'disposisi') !!}
     <p>{!! $disposisi->penerima_disposisi_id !!}</p>
 </div>
 
