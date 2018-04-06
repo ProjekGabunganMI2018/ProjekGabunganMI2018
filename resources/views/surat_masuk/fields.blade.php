@@ -39,16 +39,3 @@
     {!! Form::submit('Save', ['class' => 'btn btn-primary']) !!}
     <a href="{!! route('surat_masuk.index') !!}" class="btn btn-default">Cancel</a>
 </div>
-
-<script src="/vendor/unisharp/laravel-ckeditor/ckeditor.js"></script>
-<script>
-
-    var options = {
-        filebrowserImageBrowseUrl: '/laravel-filemanager?type=Images',
-        filebrowserImageUploadUrl: '/laravel-filemanager/upload?type=Images&_token=',
-        filebrowserBrowseUrl: '/laravel-filemanager?type=Files',
-        filebrowserUploadUrl: '/laravel-filemanager/upload?type=Files&_token='
-    };
-
-    CKEDITOR.replace( 'format_surat',options );
-</script>
