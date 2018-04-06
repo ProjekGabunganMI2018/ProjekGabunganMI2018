@@ -34,8 +34,10 @@ class SuratKeluarController extends Controller
         return redirect('surat_keluar');
     }
     public function edit($id){
+        $jenis_surat=JenisSurat::pluck('nama','id');
+        $user=User::pluck('name','id');
         $suratkeluar=SuratKeluar::where('id',$id)->first();
-        return view('surat_keluar.edit',compact('suratkeluar'));
+        return view('surat_keluar.edit',compact('suratkeluar','user','jenis_surat'));
 
     }
     public function update($id, Request $request){

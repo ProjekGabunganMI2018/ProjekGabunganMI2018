@@ -52,3 +52,5 @@ Route::group(['middleware' => 'auth'], function () {
 
     Route::resource('users', 'UserController');
 });
+
+Route::get('surat_masuk/cetak/{id}', 'SuratMasukController@cetak');

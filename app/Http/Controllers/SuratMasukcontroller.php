@@ -2,14 +2,18 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\JenisSurat;
 use App\Models\SuratMasuk;
+use App\User;
 use Illuminate\Http\Request;
 
 class SuratMasukController extends Controller
 {
     public function create()
     {
-        return view('surat_masuk.create');
+        $jenis_surat=JenisSurat::pluck('nama','id');
+        $penyimpan_surat=User::pluck('name','id');
+        return view('surat_masuk.create',compact('jenis_surat','penyimpan_surat'));
     }
 
     public function store(Request $request){
@@ -30,10 +34,18 @@ class SuratMasukController extends Controller
         return redirect('surat_masuk');
     }
     public function edit($id) {
+        $jenis_surat=JenisSurat::pluck('nama','id');
+        $penyimpan_surat=User::pluck('name','id');
         $suratmasuk=SuratMasuk::where('id',$id)->first();
-        return view('surat_masuk.edit',compact('suratmasuk'));
+        return view('surat_masuk.edit',compact('suratmasuk','jenis_surat','penyimpan_surat'));
 
     }
+
+    public function cetak($id){
+        $suratmasuk=SuratMasuk::where('id',$id)->first();
+        return view('surat_masuk.print',compact('suratmasuk'));
+    }
+
     public function update($id, Request $request){
         $input=$request->except(['_method','_token']);
 

@@ -9,7 +9,7 @@
         <th>Surat masuk</th>
         <th>File</th>
         <th>Keterangan</th>
-        <th>Isi</th>
+        <th>Print</th>
         <th colspan="3">Action</th>
     </tr>
     </thead>
@@ -24,7 +24,7 @@
             <td>{!! $SuratKeluar->surat_masuk !!}</td>
             <td>{!! $SuratKeluar->file !!}</td>
             <td>{!! $SuratKeluar->keterangan !!}</td>
-            <td>{!! $SuratKeluar->isi !!}</td>
+            <td> <a href="{!! url('surat_masuk/print') !!}">Cetak</a></td>
             <td>
                 {!! Form::open(['route' => ['surat_keluar.destroy', $SuratKeluar->id], 'method' => 'delete']) !!}
                 <div class='btn-group'>
